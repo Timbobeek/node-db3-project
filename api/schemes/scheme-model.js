@@ -15,6 +15,8 @@ function find() { // EXERCISE A
     2A- When you have a grasp on the query go ahead and build it in Knex.
     Return from this function the resulting dataset.
   */
+  // const rows = db('schemes as sc')
+  //   .join('steps as st',)
 }
 
 function findById(scheme_id) { // EXERCISE B
