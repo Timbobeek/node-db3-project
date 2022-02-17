@@ -23,5 +23,10 @@ group by productname
 
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
 
-select id, shipname, customer.contactname from 'order'
-join customer on 'order'.shipname = customer.companyname
+select 
+    id as OrderID,
+    customer.CompanyName,
+    employee.LastName as `Employee LastName`
+from 'order'
+    join customer on 'order'.CustomerId = customer.Id
+    join employee on 'order'.EmployeeId = employee.Id
